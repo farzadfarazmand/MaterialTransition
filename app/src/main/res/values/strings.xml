@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">MaterialTransition</string>
 
-    <string name="transition_name_name">transition:NAME</string>
-    <string name="transition_name_circle">transition:CIRCLE</string>
-    <string name="transition_name_phone">transition:PHONE</string>
+    <string name="transition_name">transition:NAME</string>
+    <string name="transition_avatar">transition:AVATAR</string>
+    <string name="transition_phone">transition:PHONE</string>
 
 </resources>

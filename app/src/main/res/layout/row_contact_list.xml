@@ -14,7 +14,7 @@
         android:layout_height="40dp"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:transitionName="@string/transition_name_circle" />
+        android:transitionName="@string/transition_avatar" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Jonh Doe"
-            android:transitionName="@string/transition_name_name"
+            android:transitionName="@string/transition_name"
             android:textColor="#000"
             android:textSize="18sp" />
 
@@ -38,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="+01 123456789"
-            android:transitionName="@string/transition_name_phone"
+            android:transitionName="@string/transition_phone"
             android:textColor="#9f9f9f"
             android:textSize="15sp" />
 

@@ -51,11 +51,11 @@ public class MainActivity extends AppCompatActivity {
                 // which contains the reference of the view we are transitioning *from*,
                 // and the value of the transitionName attribute
                 new Pair<View, String>(view.findViewById(R.id.contact_avatar),
-                        getString(R.string.transition_name_circle)),
+                        getString(R.string.transition_avatar)),
                 new Pair<View, String>(view.findViewById(R.id.contact_name),
-                        getString(R.string.transition_name_name)),
+                        getString(R.string.transition_name)),
                 new Pair<View, String>(view.findViewById(R.id.contact_phone),
-                        getString(R.string.transition_name_phone))
+                        getString(R.string.transition_phone))
         );
         ActivityCompat.startActivity(MainActivity.this, showDetail, options.toBundle());
 
