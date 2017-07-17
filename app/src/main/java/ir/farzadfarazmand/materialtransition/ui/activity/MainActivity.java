@@ -12,7 +12,7 @@ import android.view.View;
 
 import ir.farzadfarazmand.materialtransition.R;
 import ir.farzadfarazmand.materialtransition.listener.ContactClickListener;
-import ir.farzadfarazmand.materialtransition.model.Contact;
+import ir.farzadfarazmand.materialtransition.model.User;
 import ir.farzadfarazmand.materialtransition.ui.adapter.ContactListAdapter;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,18 +30,18 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         contactList.setLayoutManager(linearLayoutManager);
         contactList.setHasFixedSize(true);
-        ContactListAdapter adapter = new ContactListAdapter(this, Contact.createContactList(), new ContactClickListener() {
+        ContactListAdapter adapter = new ContactListAdapter(this, User.createContactList(), new ContactClickListener() {
             @Override
-            public void onItemClicked(View view, Contact contact) {
+            public void onItemClicked(View view, User contact) {
                 showDetailActivity(view, contact);
             }
         });
         contactList.setAdapter(adapter);
     }
 
-    private void showDetailActivity(View view, Contact contact) {
+    private void showDetailActivity(View view, User user) {
         Intent showDetail = new Intent(this, DetailActivity.class);
-        showDetail.putExtra(DetailActivity.EXTRA_CONTACT_KEY, contact);
+        showDetail.putExtra(DetailActivity.EXTRA_CONTACT_KEY, user);
 
         ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(
                 // the context of the activity

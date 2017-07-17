@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import ir.farzadfarazmand.materialtransition.R;
-import ir.farzadfarazmand.materialtransition.model.Contact;
+import ir.farzadfarazmand.materialtransition.model.User;
 
 /**
  * Created by Farzad Farazmand on 16,July,2017
@@ -23,7 +23,7 @@ public class DetailActivity extends AppCompatActivity {
     private TextView txtName, txtPhone, txtEmail, txtCity;
     private View circleBg;
 
-    private Contact contact;
+    private User user;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class DetailActivity extends AppCompatActivity {
     public void getContactFromIntent() {
         Bundle extras = getIntent().getExtras();
         if (extras != null && extras.containsKey(EXTRA_CONTACT_KEY))
-            contact = (Contact) extras.getSerializable(EXTRA_CONTACT_KEY);
+            user = (User) extras.getSerializable(EXTRA_CONTACT_KEY);
     }
 
     private void initView() {
@@ -48,14 +48,14 @@ public class DetailActivity extends AppCompatActivity {
         txtCity = (TextView) findViewById(R.id.detail_city);
         circleBg = findViewById(R.id.detail_circle);
 
-        if (contact != null) {
-            txtName.setText(contact.getName());
-            txtPhone.setText(contact.getPhone());
-            txtEmail.setText(contact.getEmail());
-            txtCity.setText(contact.getCity());
+        if (user != null) {
+            txtName.setText(user.getName());
+            txtPhone.setText(user.getPhone());
+            txtEmail.setText(user.getEmail());
+            txtCity.setText(user.getCity());
 
             GradientDrawable bgShape = (GradientDrawable) circleBg.getBackground();
-            bgShape.setColor(Color.parseColor(contact.getColor()));
+            bgShape.setColor(Color.parseColor(user.getColor()));
         }
     }
 }

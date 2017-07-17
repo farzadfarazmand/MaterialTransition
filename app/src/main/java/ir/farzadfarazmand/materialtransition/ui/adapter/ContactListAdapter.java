@@ -15,7 +15,7 @@ import java.util.List;
 
 import ir.farzadfarazmand.materialtransition.R;
 import ir.farzadfarazmand.materialtransition.listener.ContactClickListener;
-import ir.farzadfarazmand.materialtransition.model.Contact;
+import ir.farzadfarazmand.materialtransition.model.User;
 
 /**
  * Created by Farzad Farazmand on 16,July,2017
@@ -27,12 +27,12 @@ public class ContactListAdapter extends RecyclerView.Adapter<ContactListAdapter.
     private Context context;
     private LayoutInflater layoutInflater;
     private ContactClickListener itemClickListener;
-    private List<Contact> contactList = new ArrayList<>();
+    private List<User> userList = new ArrayList<>();
 
-    public ContactListAdapter(Context context, List<Contact> contactList, ContactClickListener itemClickListener) {
+    public ContactListAdapter(Context context, List<User> userList, ContactClickListener itemClickListener) {
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
-        this.contactList = contactList;
+        this.userList = userList;
         this.itemClickListener = itemClickListener;
     }
 
@@ -43,7 +43,7 @@ public class ContactListAdapter extends RecyclerView.Adapter<ContactListAdapter.
 
     @Override
     public void onBindViewHolder(final ContactListViewHolder holder, int position) {
-        final Contact item = contactList.get(position);
+        final User item = userList.get(position);
 
         holder.txtName.setText(item.getName());
         holder.txtPhone.setText(item.getPhone());
@@ -61,7 +61,7 @@ public class ContactListAdapter extends RecyclerView.Adapter<ContactListAdapter.
 
     @Override
     public int getItemCount() {
-        return contactList.size();
+        return userList.size();
     }
 
     public class ContactListViewHolder extends RecyclerView.ViewHolder {
