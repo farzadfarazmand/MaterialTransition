@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 // For each shared element, add to this method a new Pair item,
                 // which contains the reference of the view we are transitioning *from*,
                 // and the value of the transitionName attribute
-                new Pair<View, String>(view.findViewById(R.id.contact_circle),
+                new Pair<View, String>(view.findViewById(R.id.contact_avatar),
                         getString(R.string.transition_name_circle)),
                 new Pair<View, String>(view.findViewById(R.id.contact_name),
                         getString(R.string.transition_name_name)),

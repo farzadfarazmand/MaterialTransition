@@ -8,13 +8,12 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <View
-        android:id="@+id/contact_circle"
+    <ImageView
+        android:id="@+id/contact_avatar"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:background="@drawable/circle_bg"
         android:transitionName="@string/transition_name_circle" />
 
     <LinearLayout
@@ -22,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginLeft="16dp"
-        android:layout_toRightOf="@+id/contact_circle"
+        android:layout_toRightOf="@+id/contact_avatar"
         android:orientation="vertical">
 
         <TextView

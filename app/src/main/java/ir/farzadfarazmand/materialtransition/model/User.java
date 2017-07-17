@@ -41,6 +41,10 @@ public class User implements Serializable {
         return color;
     }
 
+    public int getImage() {
+        return image;
+    }
+
     public String getPhone() {
         return phone;
     }

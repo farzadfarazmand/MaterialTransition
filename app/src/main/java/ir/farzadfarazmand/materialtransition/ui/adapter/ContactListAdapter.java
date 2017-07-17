@@ -1,12 +1,11 @@
 package ir.farzadfarazmand.materialtransition.ui.adapter;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -47,8 +46,7 @@ public class ContactListAdapter extends RecyclerView.Adapter<ContactListAdapter.
 
         holder.txtName.setText(item.getName());
         holder.txtPhone.setText(item.getPhone());
-        GradientDrawable bgShape = (GradientDrawable) holder.circleBg.getBackground();
-        bgShape.setColor(Color.parseColor(item.getColor()));
+        holder.avatar.setImageResource(item.getImage());
 
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +66,7 @@ public class ContactListAdapter extends RecyclerView.Adapter<ContactListAdapter.
 
         public RelativeLayout parent;
         public TextView txtName, txtPhone;
-        public View circleBg;
+        public ImageView avatar;
 
         public ContactListViewHolder(View itemView) {
             super(itemView);
@@ -76,7 +74,7 @@ public class ContactListAdapter extends RecyclerView.Adapter<ContactListAdapter.
             parent = (RelativeLayout) itemView.findViewById(R.id.contact_parent);
             txtName = (TextView) itemView.findViewById(R.id.contact_name);
             txtPhone = (TextView) itemView.findViewById(R.id.contact_phone);
-            circleBg = itemView.findViewById(R.id.contact_circle);
+            avatar = (ImageView) itemView.findViewById(R.id.contact_avatar);
         }
     }
 
